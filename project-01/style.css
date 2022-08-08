@@ -20,7 +20,7 @@ body {
     flex-flow: column nowrap;
     text-align: center;
     font-weight: 700;
-    width: 60%;
+    width: 50%;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 12px;
@@ -31,17 +31,17 @@ h1 {
     letter-spacing: -1px;
 }
 
-.quote {
+.quote-container {
     font-family: 'Pacifico', cursive;
     display: block;
     width: 80%;
     margin: 0 auto 20px;
     font-style: italic;
-    font-size: 24px;
+    font-size: 28px;
 
 }
 
-.quote::before {
+.quote-container::before {
     content: "“";
     font-size: 24px;
     font-family: 'Pacifico', cursive;
@@ -50,7 +50,7 @@ h1 {
     left: 0;
 }
 
-.quote::after {
+.quote-container::after {
     content: "“";
     font-size: 24px;
     font-family: 'Pacifico', cursive;
@@ -59,13 +59,15 @@ h1 {
     left: 0;
 }
 
-.author {
+.author-container {
+    width: 80%;
     text-align: right;
     font-weight: 400;
-    margin: 0 20px 20px 0;
+    margin-bottom: 20px;
 }
 
 button {
+    font-weight: 700;
     font-size: 20px;
     cursor: pointer;
     margin: 20px;
@@ -82,4 +84,8 @@ button {
 
 .new-quote {
     letter-spacing: -1.5px;
+}
+
+.long-quote {
+    font-size: 0.8em;
 }
