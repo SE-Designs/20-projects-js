@@ -23,20 +23,26 @@ let apiQuotes = [];
 function newQuote() {
   showLoader();
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  if (quote.text.length > 80) {
-    quoteText.classList.add("long-quote");
-  } else {
-    quoteText.classList.remove("long-quote");
-  }
+  if (quote !== undefined) {
+    if (quote.text.length > 80) {
+      quoteText.classList.add("long-quote");
+    } else {
+      quoteText.classList.remove("long-quote");
+    }
 
-  quoteText.textContent = quote.text;
+    quoteText.textContent = quote.text;
 
-  if (!quote.author) {
-    author.textContent = "Unknown Author";
+    if (!quote.author) {
+      author.textContent = "Unknown Author";
+    } else {
+      author.textContent = quote.author;
+    }
+    hideLoader();
   } else {
-    author.textContent = quote.author;
+    console.log(
+      "Whoops, something went wrong: type.fit/api/quotes is not available"
+    );
   }
-  hideLoader();
 }
 
 // Get Quotes

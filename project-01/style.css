@@ -42,7 +42,7 @@ h1 {
 }
 
 .quote-container-before {
-  /* content: "“"; */
+  content: "“";
   font-size: 24px;
   font-family: "Pacifico", cursive;
   position: relative;
@@ -51,7 +51,7 @@ h1 {
 }
 
 .quote-container-after {
-  /* content: "“"; */
+  content: "“";
   font-size: 24px;
   font-family: "Pacifico", cursive;
   position: relative;
