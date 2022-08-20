@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;400;700;900&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  color: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  margin: 40px 0 0 0;
+  font-weight: 900;
+  letter-spacing: -1px;
+  font-family: "Barlow", sans-serif;
+  opacity: 0.85;
+}
+
+p {
+  color: rgba(255, 255, 255, 0.65);
+  mix-blend-mode: overlay;
+  letter-spacing: 1px;
+  font-weight: 200;
+}
+
+p a {
+  font-weight: 700;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: "Barlow", sans-serif;
+  color: rgb(240, 248, 255);
+  background-image: radial-gradient(
+    circle,
+    #2e2fec,
+    #432dea,
+    #522be8,
+    #5f2ae6,
+    #6a28e4,
+    #7827e4,
+    #8425e5,
+    #9024e5,
+    #a223e8,
+    #b321ea,
+    #c320ec,
+    #d31fee
+  );
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+}
+
+.video {
+  width: 640px;
+  height: 360px;
+  margin: 20px;
+}
+
+.btn-container {
+  mix-blend-mode: overlay;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px 20px;
+  border-radius: 4px;
+  /* border: 2px solid black; */
+}
+
+.btn {
+  outline-offset: 4px;
+  background-color: rgba(255, 255, 255, 1);
+  font-weight: 400;
+  font-family: "Barlow", sans-serif;
+  cursor: pointer;
+  border-width: 3px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
+.front {
+  font-weight: 700;
+  display: block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  transform: translateY(-6px);
+}
+
+.btn:active .front {
+  transform: translateY(-2px);
+}
+
+.btn:focus {
+  outline: none;
+}
