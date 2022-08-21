@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 40px 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  background: center bottom url("back.gif") no-repeat #43b8dc;
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+  margin: 40px 0 10px 0;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 0 40px #43b8dc;
+}
+
+p {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+  mix-blend-mode: overlay;
+  letter-spacing: 1px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.btn-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  color: rgba(255, 255, 255, 0.65);
+  cursor: pointer;
+  padding: 10px 20px;
+  margin: 20px;
+  font-weight: 700;
+  font-family: inherit;
+  text-transform: capitalize;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  background-color: #bf1c45;
+  transition: all 0.4s;
+  mix-blend-mode: luminosity;
+}
+
+.btn:hover {
+  color: rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  filter: brightness(0.5);
+}
+
+audio {
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+@media only screen and (max-height: 720px) {
+  body {
+    background: left bottom / contain url("back.gif") no-repeat #43b8dc;
+  }
+}
