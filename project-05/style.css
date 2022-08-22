@@ -82,7 +82,7 @@ a:focus {
   margin: 20px;
   padding: 10px 20px;
   border-radius: 4px;
-  transition: all 0.4s;
+  transition: all 0.6s;
 }
 
 .btn:focus {
@@ -97,7 +97,7 @@ a:focus {
 
 .btn-primary:hover {
   color: #002eff;
-  background-color: var(--secondary-color);
+  background-color: transparent;
 }
 
 .btn-secondary {
@@ -161,6 +161,7 @@ a:focus {
 }
 
 .nav-tabs {
+  font-weight: 700;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -171,7 +172,7 @@ a:focus {
 }
 
 .logo {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .nav-tab {
