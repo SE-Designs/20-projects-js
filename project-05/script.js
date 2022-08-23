@@ -8,13 +8,37 @@ hashes = [
 ];
 
 let isScrollable = true;
-let isWheelable = true;
 let index = 0;
 const sideTags = document.querySelectorAll("#sidetag");
 const navTabs = document.querySelectorAll("#nav-tab");
 
 // SCROLLBAR
 const scrollBar = document.querySelector("#scrollbar");
+
+// NAVBAR
+const toggleNav = document.querySelector("#toggle-nav");
+const mobileNav = document.querySelector("#mobile-nav");
+
+// MOBILE MENU HIGHLIGHT
+const mobileNavTabs = document.querySelectorAll("#mobile-nav-tab");
+
+// TOGGLE NAV
+toggleNav.addEventListener("click", toggleMobile);
+
+function toggleMobile() {
+  if (mobileNav.classList.contains("active")) {
+    mobileNav.classList.remove("active");
+    toggleNav.classList.remove("active");
+    document.body.style.overflowY = "auto";
+  } else {
+    mobileNav.classList.add("active");
+    toggleNav.classList.add("active");
+    document.body.style.overflowY = "hidden";
+  }
+}
+
+// DARK MODE
+const toggleMode = document.querySelector("#toggle-mode");
 
 // ONCHANGE / ONCLICK
 window.onscroll = () => {
@@ -28,10 +52,11 @@ window.onscroll = () => {
     hashes.forEach((hash, id) => {
       if (hash == "#" + url) {
         index = id;
-
+        mobileNavTabs[id].classList.add("g-text");
         sideTags[id].classList.add("sideactive");
         navTabs[id].classList.add("g-text");
       } else {
+        mobileNavTabs[id].classList.remove("g-text");
         sideTags[id].classList.remove("sideactive");
         navTabs[id].classList.remove("g-text");
       }
@@ -44,31 +69,34 @@ window.onscroll = () => {
 };
 
 // ON SCROLL
-window.onwheel = (e) => {
-  if (isWheelable) {
-    isWheelable = false;
-    if (e.deltaY >= 0) {
-      // Scroll Down:
-      if (index == hashes.length - 1) {
-        index = hashes.length - 1;
+if (window.innerWidth >= 992) {
+  let isWheelable = true;
+  window.onwheel = (e) => {
+    if (isWheelable) {
+      isWheelable = false;
+      if (e.deltaY >= 0) {
+        // Scroll Down:
+        if (index == hashes.length - 1) {
+          index = hashes.length - 1;
+        } else {
+          index++;
+        }
       } else {
-        index++;
+        // Scroll Up:
+        if (index == 0) {
+          index = 0;
+        } else {
+          index--;
+        }
       }
-    } else {
-      // Scroll Up:
-      if (index == 0) {
-        index = 0;
-      } else {
-        index--;
-      }
+
+      setActive();
+      scrollTo(hashes[index]);
+
+      setTimeout(() => (isWheelable = true), 300);
     }
-
-    setActive();
-    scrollTo(hashes[index]);
-
-    setTimeout(() => (isWheelable = true), 300);
-  }
-};
+  };
+}
 
 // SET ACTIVE
 function setActive() {

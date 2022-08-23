@@ -17,6 +17,26 @@
     <!-- <div class="scrollbar-container">
       <div class="scrollbar" id="scrollbar"></div>
     </div> -->
+    <nav class="mobile-nav active" id="mobile-nav">
+      <div class="left-container">
+      </div>
+      <div class="right-container">
+        <ul class="mobile-nav-tabs">
+          <li class="nav-tab" id="mobile-nav-tab"><a href="#hero-section">Home</a></li>
+          <li class="nav-tab" id="mobile-nav-tab"><a href="#advantages-section">Advantages</a></li>
+          <li class="nav-tab" id="mobile-nav-tab"><a href="#about-section">About</a></li>
+          <li class="nav-tab" id="mobile-nav-tab"><a href="#partners-section">Partners</a</></li>
+          <li class="nav-tab" id="mobile-nav-tab"><a href="#tokenomics-section">Tokenomics</a></li>
+          <li class="nav-tab" id="mobile-nav-tab"><a href="#contact-section">Contacts</a></li>
+        </ul>
+        <div class="social-container">
+          <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-telegram"></i></a>
+          <a href="#"><i class="bx bxl-discord-alt"></i></a>
+        </div>
+      </div>
+    </nav>
     <ul class="sidenav">
       <a href="#hero-section"><li class="sidetag sideactive" id="sidetag"><div class="circle"></div></li></a>
       <a href="#advantages-section"><li class="sidetag" id="sidetag"></li></a>
@@ -35,8 +55,13 @@
         <li class="nav-tab" id="nav-tab"><a href="#tokenomics-section">Tokenomics</a></li>
         <li class="nav-tab" id="nav-tab"><a href="#contact-section">Contacts</a></li>
       </ul>
-      <div class="theme light">
-        <i class="bx bx-moon"></i>
+      <div class="nav-mini">
+        <div class="theme light" id="toggle-mode">
+          <i class="bx bx-moon"></i>
+        </div>
+        <div class="theme mobile-toggle" id="toggle-nav">
+          <i class='bx bx-menu-alt-right'></i>
+        </div>
       </div>
     </nav>
     <section class="section hero" id="hero-section">
@@ -49,8 +74,8 @@
         options protocol
       </p>
       <div class="btn-container">
-        <button class="btn btn-primary">Launch App</button>
-        <button class="btn btn-secondary">Documentation</button>
+        <button class="btn btn-primary">Launch App</button
+        ><button class="btn btn-secondary">Documentation</button>
       </div>
     </section>
     <section class="section advantages" id="advantages-section">
