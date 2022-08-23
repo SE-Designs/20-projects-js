@@ -346,7 +346,70 @@ a:focus {
   align-items: center;
 }
 
+.partners-container a {
+  border-bottom: 0;
+}
+
 /* tokenomics-section */
+
+.tokenomics {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.tokenomics-info {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.tokenomics-info h5 {
+  letter-spacing: 2px;
+  font-size: 1.25rem;
+  font-family: "JetBrains Mono", monospace;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.tokenomics-info h2 {
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.tokenomics-info .btn {
+  margin-left: 0;
+}
+
+.tokens-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.token {
+  width: 35%;
+  text-align: center;
+  margin: 20px;
+  padding: 30px 40px 40px 40px;
+  background-color: var(--secondary-color);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  border-radius: 4px;
+}
+
+.token h4 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.token p {
+  white-space: pre-wrap;
+}
 
 /* footer-section */
 
@@ -416,6 +479,11 @@ a:focus {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "JetBrains Mono", monospace;
+}
+
+.footer-mini-container li a {
+  color: currentColor;
+  border-bottom: 0;
 }
 
 .footer-mini-container {

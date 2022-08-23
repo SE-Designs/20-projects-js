@@ -19,10 +19,16 @@ const scrollBar = document.querySelector("#scrollbar");
 // ONCHANGE / ONCLICK
 window.onscroll = () => {
   if (isScrollable) {
+    // let windowHeight = window.innerHeight * id;
+    // let scrollBarY = Math.round(
+    //   (windowHeight / document.body.offsetHeight) * 100
+    // );
     isScrollable = false;
     let url = window.top.location.hash.substring(1);
     hashes.forEach((hash, id) => {
       if (hash == "#" + url) {
+        index = id;
+
         sideTags[id].classList.add("sideactive");
         navTabs[id].classList.add("g-text");
       } else {
@@ -30,6 +36,9 @@ window.onscroll = () => {
         navTabs[id].classList.remove("g-text");
       }
     });
+    // console.log(scrollBarY);
+    // scrollBar.style.top =
+    //   Math.round(scrollBarY * (window.innerHeight / 100)) + "px";
   }
   setTimeout(() => (isScrollable = true), 500);
 };
@@ -38,10 +47,6 @@ window.onscroll = () => {
 window.onwheel = (e) => {
   if (isWheelable) {
     isWheelable = false;
-    let windowHeight = window.innerHeight * index;
-    let scrollBarY = Math.round(
-      (windowHeight / document.body.offsetHeight) * 100
-    );
     if (e.deltaY >= 0) {
       // Scroll Down:
       if (index == hashes.length - 1) {
@@ -60,8 +65,6 @@ window.onwheel = (e) => {
 
     setActive();
     scrollTo(hashes[index]);
-    scrollBar.style.top =
-      Math.round(scrollBarY * (window.innerHeight / 100)) + "px";
 
     setTimeout(() => (isWheelable = true), 300);
   }
