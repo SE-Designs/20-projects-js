@@ -17,7 +17,7 @@
     <!-- <div class="scrollbar-container">
       <div class="scrollbar" id="scrollbar"></div>
     </div> -->
-    <nav class="mobile-nav active" id="mobile-nav">
+    <nav class="mobile-nav" id="mobile-nav">
       <div class="left-container">
       </div>
       <div class="right-container">
@@ -1492,6 +1492,13 @@
             https://images.hedera.com/HH-Council-Logos-White-IBM.png?w=600&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373574&amp;s=0b343d9f751a5a0d84f6a6d0783dc18c 3x
           "
         /></a><a href="#"><img
+          src="https://images.hedera.com/HH-Council-Logos-White-L.png?w=200&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=7908ff2146da4170a11d9493497a21f4"
+          srcset="
+            https://images.hedera.com/HH-Council-Logos-White-L.png?w=300&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=8ce36e643abfc885a6a3d5b9f7e12b00 1.5x,
+            https://images.hedera.com/HH-Council-Logos-White-L.png?w=400&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=9bbd4567f496f991505452a9684c095a 2x,
+            https://images.hedera.com/HH-Council-Logos-White-L.png?w=600&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=0b1a5d3905c794a0eeca0c9c49659b60 3x
+          "
+        /></a><a href="#"><img
           src="https://images.hedera.com/HH_Council_Logos_Full_UBI.png?w=200&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657370929&amp;s=cb91076696a9f2b32e2545efadae8a12"
           srcset="
             https://images.hedera.com/HH_Council_Logos_Full_UBI.png?w=300&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657370929&amp;s=405ae8b04c6bf113696b20535354af8b 1.5x,
@@ -1504,13 +1511,6 @@
             https://images.hedera.com/Hedera-Council-Logos-FIS-White.png?w=300&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373415&amp;s=533dd226ae0cb211ac54cd08120eb013 1.5x,
             https://images.hedera.com/Hedera-Council-Logos-FIS-White.png?w=400&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373415&amp;s=b118bb0182e24cf440e95c5880ab4712 2x,
             https://images.hedera.com/Hedera-Council-Logos-FIS-White.png?w=600&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373415&amp;s=84d10c78df78b7d08bafc0835db2fabb 3x
-          "
-        /></a><a href="#"><img
-          src="https://images.hedera.com/HH-Council-Logos-White-L.png?w=200&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=7908ff2146da4170a11d9493497a21f4"
-          srcset="
-            https://images.hedera.com/HH-Council-Logos-White-L.png?w=300&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=8ce36e643abfc885a6a3d5b9f7e12b00 1.5x,
-            https://images.hedera.com/HH-Council-Logos-White-L.png?w=400&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=9bbd4567f496f991505452a9684c095a 2x,
-            https://images.hedera.com/HH-Council-Logos-White-L.png?w=600&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373559&amp;s=0b1a5d3905c794a0eeca0c9c49659b60 3x
           "
         /></a><a href="#"><img
           src="https://images.hedera.com/HH-Council-Boeing-White.png?w=200&amp;auto=compress%2Cformat&amp;fit=crop&amp;fp-x=0.5&amp;fp-y=0.5&amp;dm=1657373277&amp;s=bfd20ad0f2a0747de6a821b2681481c2"
@@ -1527,7 +1527,10 @@
         <h5 class="g-text">Tokenomics</h5>
         <h2 class="headline">Dual Token Economics</h2>
         <p>DAEX utilizes two separate tokens to coordinate new ecosystem dynamics in a synergistic feedback loop.</p>
-        <button class="btn btn-primary">Documentation</button>
+        <div class="btn-container">
+          <button class="btn btn-primary">Docs</button
+            ><button class="btn btn-secondary">Token Economics</button>
+        </div>
       </div>
       <div class="tokens-container">
         <div class="token">
@@ -1553,8 +1556,7 @@ It can be used to mint synthetic assets like indeces and synths.</p>
             name="email"
             id="email"
             placeholder="Subscribe for Newsletter"
-          />
-          <button class="btn btn-secondary">Subscribe</button>
+          /><button class="btn btn-secondary">Subscribe</button>
         </div>
         <div class="social-container">
           <a href="#"><i class="bx bxl-facebook-circle"></i></a>

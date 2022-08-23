@@ -161,7 +161,12 @@ a:focus {
 }
 
 .mobile-nav {
+  height: 100vh;
   display: none;
+}
+
+.mobile-nav ul {
+  list-style: none;
 }
 
 .nav-tabs {
@@ -449,6 +454,10 @@ a:focus {
 }
 
 .subscription-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
   margin: 0 20px;
 }
 
@@ -497,6 +506,7 @@ a:focus {
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 20px;
+  gap: 20px;
 }
 
 .footer-tag {
@@ -517,15 +527,6 @@ a:focus {
   flex-flow: column;
   justify-content: start;
   align-items: start;
-  margin: 20px;
-}
-
-.footer-mini-container:first-child {
-  margin-left: 0;
-}
-
-.footer-mini-container:last-child {
-  margin-right: 0;
 }
 
 .footer-mini-container ul {
@@ -561,8 +562,16 @@ a:focus {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-  .footer-mini-container {
-    margin: 12px;
+  .advantages-container {
+    margin-top: 40px;
+  }
+
+  .adv-mini-container {
+    margin: 0 20px;
+  }
+
+  .wrapper {
+    padding-bottom: 0;
   }
 }
 
@@ -593,8 +602,8 @@ a:focus {
   }
 
   .adv-mini-container {
-    font-size: 0.75rem;
-    min-width: 180px;
+    margin: 15px;
+    font-size: 0.875rem;
   }
 
   .sidenav {
@@ -603,8 +612,8 @@ a:focus {
 
   .main-container {
     margin: 0 auto;
-    padding: 10px;
-    font-size: 0.75rem;
+    padding: 30px 20px 20px 20px;
+    font-size: 0.875rem;
   }
 
   .wrapper {
@@ -627,12 +636,28 @@ a:focus {
     margin-right: 0;
   }
 
+  .footer-middle {
+    margin-top: 20px;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .footer-mini-container {
-    margin: 6px;
+    flex: 0 1 calc(33% - 20px);
+    justify-self: center;
   }
 
   .footer-tag {
     font-size: 0.875rem;
+  }
+
+  .footer-mini-container li {
+    line-height: 1.05;
+    margin: 4px 0;
+  }
+
+  .footer-mini-container li::before {
+    display: none;
   }
 
   .footer-mini-container li a {
@@ -717,13 +742,26 @@ a:focus {
     font-size: 3rem;
   }
 
+  .about-mini-container {
+    width: 100%;
+    margin: 10px 10px 10px 0;
+  }
+
+  .about-mini-img {
+    margin-right: 10px;
+  }
+
   .tokens-container {
     width: 100%;
     flex-flow: column nowrap;
   }
 
+  .tokenomics-info {
+    margin-bottom: 20px;
+  }
+
   .token {
-    margin: 20px 0;
+    margin: 15px 0;
   }
 }
 
@@ -731,6 +769,10 @@ a:focus {
 @media only screen and (max-width: 600px) {
   .section {
     padding: 80px 40px;
+  }
+
+  .tokenomics-info p {
+    margin-bottom: 10px;
   }
 
   .hero h2 {
@@ -752,5 +794,40 @@ a:focus {
   .btn {
     margin: 5px 10px;
     font-size: 0.75rem;
+  }
+
+  .main-container .headline {
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+
+  .footer-upper {
+    flex-flow: column nowrap;
+  }
+
+  .subscription-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .email-input {
+    width: 60%;
+    margin: 10px 0;
+    padding: 10px 20px;
+  }
+
+  .footer-mini-container {
+    flex: 0 1 calc(50% - 20px);
+  }
+
+  .footer-bottom {
+    flex-flow: column-reverse nowrap;
+  }
+
+  .footer-bottom small {
+    width: 100%;
+    margin: 20px 0;
   }
 }
