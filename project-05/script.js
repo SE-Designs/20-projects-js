@@ -96,6 +96,31 @@ if (window.innerWidth >= 992) {
       setTimeout(() => (isWheelable = true), 300);
     }
   };
+
+  // MOVE BY ARROWS
+  document.addEventListener("keyup", (e) => {
+    if (e.code === "ArrowUp" || e.code === "ArrowLeft") {
+      console.log("Up Arrow");
+      // IF FIRST - JUMP TO BOTTOm
+      if (index == 0) {
+        index = hashes.length - 1;
+        scrollTo(hashes[index]);
+      } else {
+        scrollTo(hashes[index - 1]);
+      }
+    }
+
+    if (e.code === "ArrowDown" || e.code === "ArrowRight") {
+      console.log("Down Arrow");
+      // IF LAST - JUMP TO TOP
+      if (index == hashes.length - 1) {
+        index = 0;
+        scrollTo(hashes[index]);
+      } else {
+        scrollTo(hashes[index + 1]);
+      }
+    }
+  });
 }
 
 // SET ACTIVE
