@@ -13,9 +13,9 @@
   padding: 0;
 }
 
-*:focus {
+/* *:focus {
   outline: none;
-}
+} */
 
 :root {
   --primary-color: #0a0a0a;
@@ -276,7 +276,7 @@ a {
   align-items: center;
   justify-content: center;
   background-color: #f6f9ff;
-  border-bottom: 1px solid #000;
+  /* border-bottom: 1px solid #000; */
 }
 
 /* hero-section */
@@ -416,7 +416,11 @@ a {
 }
 
 .partners-container a {
-  border-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88px;
+  border-bottom: 2px solid transparent;
 }
 
 /* tokenomics-section */
@@ -476,10 +480,6 @@ a {
   margin-bottom: 10px;
 }
 
-.token p {
-  white-space: pre-wrap;
-}
-
 /* footer-section */
 
 .contact {
@@ -535,7 +535,7 @@ a {
   color: rgba(0, 0, 0, 0.8);
   font-size: 2rem;
   margin: 10px;
-  border-bottom: 0;
+  border-bottom: 2px solid transparent;
   transition: all 0.4s;
 }
 
@@ -564,6 +564,11 @@ a {
 .footer-mini-container li a {
   color: currentColor;
   border-bottom: 0;
+  transition: all 0.4s;
+}
+
+.footer-mini-container li a:hover {
+  opacity: 0.8;
 }
 
 .footer-mini-container {
@@ -601,18 +606,41 @@ a {
 }
 
 /* Focus and Active States */
-.logo a:focus {
-  border-bottom: 2px solid #fff;
+
+.nav .logo a:focus {
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .nav-tab a:focus {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid var(--secondary-color);
 }
 
 .theme:focus {
   color: var(--secondary-color);
   background-color: #002eff;
-  border: 2px solid --secondary-color;
+  border: 2px solid var(--secondary-color);
+}
+
+.btn:focus {
+  filter: blur(0.5px);
+  mix-blend-mode: difference;
+}
+
+.partners-container a:focus {
+  border-bottom: 2px solid #002eff;
+}
+
+.social-container a:focus {
+  border-bottom: 2px solid #002eff;
+}
+
+.footer-mini-container li a:focus {
+  opacity: 0.8;
+  color: #002eff;
+}
+
+.footer-bottom .logo a:focus {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 /* Media Queries */
@@ -791,7 +819,7 @@ a {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .section {
-    padding: 80px 40px;
+    padding: 80px 40px 40px;
   }
 
   .tokenomics-info p {

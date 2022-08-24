@@ -21,6 +21,8 @@ const mobileNav = document.querySelector("#mobile-nav");
 
 // MOBILE MENU HIGHLIGHT
 const mobileNavTabs = document.querySelectorAll("#mobile-nav-tab");
+const mobileLinks = document.querySelectorAll("#mobile-link");
+const mobileSocialLinks = document.querySelectorAll("#mobile-social-link");
 
 // TOGGLE NAV
 toggleNav.addEventListener("click", toggleMobile);
@@ -97,7 +99,7 @@ if (window.innerWidth >= 992) {
     }
   };
 
-  // MOVE BY ARROWS
+  // MOVE BY KEYBOARD
   document.addEventListener("keyup", (e) => {
     if (e.code === "ArrowUp" || e.code === "ArrowLeft") {
       console.log("Up Arrow");
@@ -119,6 +121,27 @@ if (window.innerWidth >= 992) {
       } else {
         scrollTo(hashes[index + 1]);
       }
+    }
+
+    switch (e.code) {
+      case "Digit1":
+        scrollTo(hashes[0]);
+        break;
+      case "Digit2":
+        scrollTo(hashes[1]);
+        break;
+      case "Digit3":
+        scrollTo(hashes[2]);
+        break;
+      case "Digit4":
+        scrollTo(hashes[3]);
+        break;
+      case "Digit5":
+        scrollTo(hashes[4]);
+        break;
+      case "Digit6":
+        scrollTo(hashes[5]);
+        break;
     }
   });
 }
