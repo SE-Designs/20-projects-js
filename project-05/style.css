@@ -670,10 +670,7 @@ a:focus {
 
 /* Media Queries */
 
-@media only screen and (min-width: 1200px) {
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* DEVICES UNDER 1200PX */
 @media only screen and (max-width: 1200px) {
   .advantages-container {
     margin-top: 40px;
@@ -688,10 +685,8 @@ a:focus {
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 992px) {
+/* DEVICES UNDER 992PX WIDTH AND 672PX HEIGHT */
+@media only screen and (max-width: 992px) and (max-height: 672px) {
   body {
     overflow-y: auto;
   }
@@ -781,7 +776,7 @@ a:focus {
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* DEVICES UNDER 768PX */
 @media only screen and (max-width: 768px) {
   .nav-mini {
     display: flex;
@@ -841,7 +836,7 @@ a:focus {
   }
 }
 
-/* Extra small devices (phones, 600px and down) */
+/* DEVICES UNDER 600PX */
 @media only screen and (max-width: 600px) {
   .section {
     padding: 80px 40px 40px;
