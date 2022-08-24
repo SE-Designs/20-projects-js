@@ -41,6 +41,27 @@ function toggleMobile() {
 
 // DARK MODE
 const toggleMode = document.querySelector("#toggle-mode");
+const lightMode = "<i class='bx bx-moon' ></i>";
+const darkMode = "<i class='bx bx-sun'></i>";
+toggleMode.innerHTML = lightMode;
+
+function switchTheme() {
+  if (toggleMode.classList.contains("dark")) {
+    toggleMode.innerHTML = "";
+    toggleMode.innerHTML = lightMode;
+    toggleMode.classList.remove("dark");
+    toggleMode.classList.add("light");
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    toggleMode.innerHTML = "";
+    toggleMode.innerHTML = darkMode;
+    toggleMode.classList.add("dark");
+    toggleMode.classList.remove("light");
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+}
+
+toggleMode.addEventListener("click", switchTheme);
 
 // ONCHANGE / ONCLICK
 window.onscroll = () => {
