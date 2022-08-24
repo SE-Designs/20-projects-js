@@ -13,7 +13,7 @@ const sideTags = document.querySelectorAll("#sidetag");
 const navTabs = document.querySelectorAll("#nav-tab");
 
 // SCROLLBAR
-const scrollBar = document.querySelector("#scrollbar");
+// const scrollBar = document.querySelector("#scrollbar");
 
 // NAVBAR
 const toggleNav = document.querySelector("#toggle-nav");
