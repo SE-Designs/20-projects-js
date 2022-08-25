@@ -538,13 +538,13 @@ a:focus {
   font-family: "JetBrains Mono", monospace;
   background-color: transparent;
   border: 0;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   transition: all 0.4s;
 }
 
 .email-input:focus {
   outline: none;
-  color: var(--primary-color);
   opacity: 0.8;
   border-bottom: 2px solid var(--primary-text);
 }
@@ -557,7 +557,8 @@ a:focus {
 }
 
 .social-container a {
-  color: rgba(0, 0, 0, 0.8);
+  opacity: 0.8;
+  color: var(--primary-color);
   font-size: 2rem;
   margin: 10px;
   border-bottom: 2px solid transparent;
